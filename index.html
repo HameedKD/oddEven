@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>even-odd</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url("3.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+        h1{
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 100px;
+            
+        }
+        input{
+            width: 465px;
+            height: 40px;
+            margin-left: 453px;
+            outline: none;
+            position: relative;
+            top: 110px;
+            border-radius: 5px;
+            border: none;
+        }
+        button{
+            width: 465px;
+            height: 40px;
+            margin-left: 453px; 
+            background-color: white;
+            color: rgb(177, 174, 174);
+            border: none;
+            font-size: 15px;
+           font-family: sans-serif;
+           font-weight: bold;
+           position: relative;
+           top: 120px;
+           padding: 5px;
+           border-radius: 5px;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            position: relative;
+           top: 123px;
+           /* animation-delay: 0.5s; */
+           
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="animate__animated animate__backInDown">Check your number is even or odd</h1>
+    <input type="text" id="number" placeholder="Enter your number">
+    <br><br>
+  
+    <button onclick="check_number()">Find result</button>
+    <h2 id="result"></h2>
+    
+    <script>
+
+   function check_number()
+   {
+        var number = document.getElementById("number").value;
+        var result = document.getElementById("result");
+        if(number%2 == 0)
+        {
+            result.innerHTML = "Even number";
+            result.className ="animate__animated animate__backInUp";
+        
+        }
+        else{
+            result.innerHTML = "Odd number";
+            result.className ="animate__animated animate__backInUp";
+        }
+   }
+
+    </script>
+</body>
+</html>
